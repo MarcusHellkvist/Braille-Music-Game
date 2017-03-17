@@ -1,0 +1,71 @@
+-------------------------------------------------------------------------
+Takohi Android Vibration Plugin (Unity3+4)
+(C)opyright 2013 Takohi 
+[contact@takohi.com]
+-------------------------------------------------------------------------
+
+INSTALLATION FROM UNITY ASSET STORE
+
+After you download and import this package from the Unity Asset Store, this product will be automatically be installed.
+
+After importing is complete, you will be ready to go.
+
+-------------------------------------------------------------------------
+
+Examples
+
+in  [Project] /Takohi/Examples/AndroidVibrationPlugin you will find one example.
+
+-------------------------------------------------------------------------
+
+Demo
+
+You can download a demo to run on your Android device here:
+http://www.takohi.com/data/unity/plugins/android_vibration/unity_android_vibration_plugin_demo.apk
+
+-------------------------------------------------------------------------
+
+PACKAGE STRUCTURE
+
+ [Project] Plugins					- Android Vibration Plugin
+
+ [Project] Takohi/Examples/AndroidVibrationPlugin	- Android Vibration Plugin Example
+
+-------------------------------------------------------------------------
+DOCUMENTATION
+
+C# CLASS REFERENCE
+http://www.takohi.com/data/unity/plugins/android_vibration/documentation
+
+-------------------------------------------------------------------------
+
+UPDATE
+
+1.3 2016/01/13 Replace DLL by CS file for compatibility
+
+1.2.2 2014/02/06
+Change name of folder AndroidVibrationPlugins to AndroidVibrationPlugin.
+
+1.2.1 2013/10/09
+Demo scene fixed.
+
+1.2 2013/10/03
+Add compatibility for Unity 3.5 and above.
+Add horizontal slider in the demo to allow user to choose the amount of time to vibrate.
+Release a demo APK to test the plugin (link in the description of the asset and in the readme file). 
+
+1.1 2013/09/20
+Add repeat mode. You can now specify how many times you want to repeat a vibration pattern.
+Some bugs has been fixed.
+
+1.0 2013/09/13
+Initial version.
+
+If you have any questions regarding this product, send us an email at contact@takohi.com.
+
+-------------------------------------------------------------------------
+
+Thanks for your interest in our components,
+
+	The Takohi Team.
+
