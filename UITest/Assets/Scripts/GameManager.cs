@@ -33,6 +33,7 @@ public class GameManager : MonoBehaviour {
 	private int playerScore = 0;
 
 	private float timeLeftToSpawn = 8f;
+	public float timeLeftOnTrack = 70f;
 	public float countdown = 3f;
 
 	private int[,] brailleAlphabet = new int[26,6] {
@@ -102,12 +103,21 @@ public class GameManager : MonoBehaviour {
 		}
 
 		CountDownTime();
+		GameCountDown();
 		FillPlayerTemp();
 		SpawnTimer();
 		scoreText.text = "Score: " + playerScore;
 		spawnText.text = "Time: " + System.Math.Round(timeLeftToSpawn, 1);
 		activeBrailleText.text = brailleAlphabetLetter[randomNumber];
 
+	}
+
+	void GameCountDown ()
+	{
+		timeLeftOnTrack -= Time.deltaTime;
+		if (timeLeftOnTrack <= 0) {
+			SceneManager.LoadScene("ScoreScreen");
+		}
 	}
 
 	void CountDownTime ()
@@ -180,16 +190,16 @@ public class GameManager : MonoBehaviour {
 			}
 			else {
 				print ("Wrong");
-				audioPlayer.PlayOneShot(wrongAnswer, 0.5f);
+				audioPlayer.PlayOneShot(wrongAnswer, 0.6f);
 				correctMusicIsPlaying = false;
 				return;
 			}
 		}
-		audioPlayer.PlayOneShot(correctAnswer, 0.30f);
+		audioPlayer.PlayOneShot(correctAnswer, 0.4f);
 		playerScore++;
 	}
 
-	void ResetPlayerBox ()
+	public void ResetPlayerBox ()
 	{
 		for (int i = 0; i < playerBox.Length; i++) {
 			playerBox[i].isOn = false;

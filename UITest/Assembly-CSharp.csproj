@@ -84,6 +84,7 @@
      <Compile Include="Assets\LeanTouch\Scripts\LeanGesture.cs" />
      <Compile Include="Assets\LeanTouch\Scripts\LeanSnapshot.cs" />
      <Compile Include="Assets\LeanTouch\Scripts\LeanTouch.cs" />
+     <Compile Include="Assets\Scripts\AudioPlayerScript.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\MouseEnter.cs" />
      <Compile Include="Assets\Scripts\OnEnterObject.cs" />

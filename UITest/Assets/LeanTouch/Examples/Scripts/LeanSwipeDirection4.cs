@@ -6,9 +6,8 @@ namespace Lean.Touch
 	// This script will tell you which direction you swiped in
 	public class LeanSwipeDirection4 : MonoBehaviour
 	{
-		[Tooltip("The text element we will display the swipe information in")]
-		public Text InfoText;
-	
+		public GameManager other;
+
 		protected virtual void OnEnable()
 		{
 			// Hook into the events we need
@@ -24,31 +23,32 @@ namespace Lean.Touch
 		public void OnFingerSwipe(LeanFinger finger)
 		{
 			// Make sure the info text exists
-			if (InfoText != null)
-			{
+
 				// Store the swipe delta in a temp variable
 				var swipe = finger.SwipeScreenDelta;
 			
 				if (swipe.x < -Mathf.Abs(swipe.y))
 				{
-					InfoText.text = "You swiped left!";
+					print("You swiped left!");
 				}
 			
 				if (swipe.x > Mathf.Abs(swipe.y))
 				{
-					InfoText.text = "You swiped right!";
+					print("You swiped right!");
 				}
 			
 				if (swipe.y < -Mathf.Abs(swipe.x))
 				{
-					InfoText.text = "You swiped down!";
+					print("You swiped down!");
+					other.ResetPlayerBox();
+
 				}
 			
 				if (swipe.y > Mathf.Abs(swipe.x))
 				{
-					InfoText.text = "You swiped up!";
+					print("You swiped up!");
 				}
-			}
+			
 		}
 	}
 }

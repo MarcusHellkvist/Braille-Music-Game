@@ -80,18 +80,18 @@ public class TutorialManager : MonoBehaviour {
 
 	}
 
-	public void NextCharacter()
+	public void NextCharacter ()
 	{
-			sValue++;
+		sValue++;
 
-			if (sValue == 4) {
-				SceneManager.LoadScene("LevelOne");
-			}
-			else if (sValue == 8) {
-				SceneManager.LoadScene("LevelTwo");
-			}
-
+		if (sValue == 4) {
+			SceneManager.LoadScene ("LevelOne");
+		} else if (sValue == 8) {
+			SceneManager.LoadScene ("LevelTwo");
+		} else {
 			ShowLetter ();
+		}
+
 
 	}
 
