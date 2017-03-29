@@ -30,6 +30,8 @@ namespace Lean.Touch
 				if (swipe.x < -Mathf.Abs(swipe.y))
 				{
 					print("You swiped left!");
+					other.ResetPlayerBox();
+
 				}
 			
 				if (swipe.x > Mathf.Abs(swipe.y))
@@ -40,7 +42,6 @@ namespace Lean.Touch
 				if (swipe.y < -Mathf.Abs(swipe.x))
 				{
 					print("You swiped down!");
-					other.ResetPlayerBox();
 
 				}
 			

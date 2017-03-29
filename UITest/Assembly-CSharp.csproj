@@ -85,9 +85,11 @@
      <Compile Include="Assets\LeanTouch\Scripts\LeanSnapshot.cs" />
      <Compile Include="Assets\LeanTouch\Scripts\LeanTouch.cs" />
      <Compile Include="Assets\Scripts\AudioPlayerScript.cs" />
+     <Compile Include="Assets\Scripts\FeedbackScript.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
      <Compile Include="Assets\Scripts\MouseEnter.cs" />
      <Compile Include="Assets\Scripts\OnEnterObject.cs" />
+     <Compile Include="Assets\Scripts\ScoreTextScript.cs" />
      <Compile Include="Assets\Scripts\ScriptHolder.cs" />
      <Compile Include="Assets\Scripts\TutorialManager.cs" />
      <Compile Include="Assets\Takohi\Examples\AndroidVibrationPlugin\VibrationTest.cs" />

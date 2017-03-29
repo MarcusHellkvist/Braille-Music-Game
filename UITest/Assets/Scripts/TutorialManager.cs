@@ -49,7 +49,8 @@ public class TutorialManager : MonoBehaviour {
 
 		audioPlayer = GetComponent<AudioSource>();
 
-		sValue = GameObject.Find("ScriptHolder").GetComponent<ScriptHolder>().startValue;
+		//sValue = GameObject.Find("ScriptHolder").GetComponent<ScriptHolder>().startValue;
+		sValue = ScriptHolder.startValue;
 		print (sValue);
 		activeBrailleText = GameObject.Find("activeBrailleCharacter").GetComponent<Text>();
 		ShowLetter();

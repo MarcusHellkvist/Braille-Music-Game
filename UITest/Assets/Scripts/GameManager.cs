@@ -30,10 +30,11 @@ public class GameManager : MonoBehaviour {
 	private int lastLetter = 0;
 	private int randomNumber = 0;
 	private int previousNumber = 0;
-	private int playerScore = 0;
+	public static int playerScore;
+	public static int maxScore;
 
 	private float timeLeftToSpawn = 8f;
-	public float timeLeftOnTrack = 70f;
+	public float timeLeftOnTrack;
 	public float countdown = 3f;
 
 	private int[,] brailleAlphabet = new int[26,6] {
@@ -74,7 +75,18 @@ public class GameManager : MonoBehaviour {
 	private Text countDownText;
 
 	// Use this for initialization
+
 	void Start () {
+
+		playerScore = 0;
+		maxScore = -1;
+
+		activeSceneName = SceneManager.GetActiveScene ();
+		if (activeSceneName.name == "LevelOne") {
+			timeLeftOnTrack = 57f;
+		} else if (activeSceneName.name == "LevelTwo") {
+			timeLeftOnTrack = 73f;
+		}
 
 		audioPlayer = GetComponent<AudioSource>();
 		
@@ -149,7 +161,6 @@ public class GameManager : MonoBehaviour {
 
 	void SpawnNewLetter ()
 	{
-		activeSceneName = SceneManager.GetActiveScene ();
 		if (activeSceneName.name == "LevelOne") {
 			firstLetter = 0;
 			lastLetter = 4;
@@ -164,6 +175,7 @@ public class GameManager : MonoBehaviour {
 		}
 
 		previousNumber = randomNumber;
+		maxScore++;
 		audioPlayer.PlayOneShot(letterSound[randomNumber]);
 	}
 
